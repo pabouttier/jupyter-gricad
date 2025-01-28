@@ -60,6 +60,10 @@ footer: pierre-antoine.bouttier@univ-grenoble-alpes.fr - CC BY-SA 4.0
 
 - Aspect collaboratif (au sein d'une équipe, d'un projet, données communes, espaces cloisonnés) : 
   - JupyterHub & BinderHub **Non** 
+  - JupyterHPC : **oui au niveau des données, à plusieurs sur un même job ?**
+- Passage à l'échelle : 
+  - JupyterHub & BinderHub : **difficile/ça dépend**
+  - 
 
 ---
 # Notre offre de services numériques
