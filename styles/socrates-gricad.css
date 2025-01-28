@@ -1,0 +1,127 @@
+/* @theme socrates */
+
+/*
+  ============================================
+    Created by Paulo Cunha
+    version: 1.0
+    last update: 30.dez.2021
+  ============================================
+*/
+
+/* Importing COLOR SCHEMA */
+
+@import "default";
+@import "schema";
+@import "structure";
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
+
+/***************** COMMON STRUCTURE **********************/
+
+:root {
+    font-family: "Noto Sans";
+    font-weight: initial;
+    --cool-list-color: #ff7800;
+}
+
+/* Links */
+section a {
+    text-decoration: underline;
+}
+
+/* ------------------- TITLEPAGE -----------------------------*/
+section.titlepage {
+    --title-color: #ff7800;
+}
+
+section.titlepage .title {
+    border-bottom: 0px solid var(--border-color);
+}
+
+section.titlepage .subtitle {
+    font-weight: 300;
+    color: #ff7800;
+}
+
+section.titlepage .author,
+section.titlepage .date,
+section.titlepage .organization {
+    text-align: left;
+}
+section.titlepage h1 {
+    border-bottom: 0px solid var(--border-color);
+}
+
+section.titlepage h2 {
+    font-weight: 300;
+}
+
+section.titlepage h3,
+section.titlepage h4,
+section.titlepage h5 {
+    text-align: right;
+}
+
+/* -------------------- TRANSITION ---------------------------------*/
+section.transition {
+    --transitionpage-color: #49454f;
+}
+
+/* ------------------- CITE -----------------------------*/
+section.cite {
+    --background-color: #49454f;
+    --strong-color: rgb(182, 112, 27);
+    text-align: center;
+}
+
+section.cite * {
+    text-align: center;
+}
+
+section.cite p {
+    color: #fffbfe;
+}
+
+section.cite strong {
+    color: #f87ca1;
+}
+
+.cite-author {
+    text-align: center;
+}
+.cite-author:after {
+    color: #ff7700;
+    font-size: 130%;
+    font-style: italic;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    /* padding-right     : 130px; */
+    text-align: center;
+}
+.cite-author[data-text]:after {
+    text-align: center;
+    content: " ~ " attr(data-text) " ~ ";
+}
+.cite-author p {
+    padding-bottom: 40px;
+    /* text-align: center;  */
+}
+
+@keyframes marp-outgoing-transition-vertical-scroll {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(
+            calc(var(--marp-transition-direction, 1) * -100%)
+        );
+    }
+}
+@keyframes marp-incoming-transition-vertical-scroll {
+    from {
+        transform: translateY(calc(var(--marp-transition-direction, 1) * 100%));
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
